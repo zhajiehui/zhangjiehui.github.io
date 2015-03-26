@@ -1,0 +1,39 @@
+.Page{
+	color:#ccc;
+}
+.Page_con div,.Page_con .Page_right .Page_jump,.Page_con .Page_right button{
+	float:left;
+}
+.Page_con .Page_digg{
+	margin-right:15px;
+}
+.Page_con .goto{
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	vertical-align:middle;
+	margin-right:10px;
+}
+.Page_con button{
+	cursor:pointer;
+	height:30px;
+	font-size:14px;
+	border:1px solid #ccc;
+	border-radius:4px;
+	background-color:#fff;
+	
+}
+.Page_right .Page_jump input{
+	height:26px;
+	border:0;
+	margin-left:2px;
+	width:40px;
+}
+.Page_jump{
+	min-width:60px;
+	height:28px;
+	border:1px solid #ccc;
+	border-radius:4px;
+	margin-right:10px;
+}
+

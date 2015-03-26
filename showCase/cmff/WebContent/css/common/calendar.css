@@ -1,0 +1,305 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	width:100%; 
+	height:100%;
+}
+
+/******日历输入框  高度为26px和30px******/
+.calInputdiv.btn,.calInputdiv30 {
+	min-width:100px;
+	margin: 0; 
+	padding: 0;
+	text-align:left;
+	position:relative;
+	display: block;
+	float:left;
+	vertical-align: middle; 
+	border: 0px solid #bbbbbb;
+	background-color: transparent !important;
+	overflow: hidden !important;
+}
+.calInputdiv.btn{
+	height:26px;*height:26px;
+}
+ .calInputdiv30{
+	height:30px;*height:30px;
+	width:98%;
+}
+.calInputdiv input,.calInputdiv30 input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0 solid #BBBBBB;
+    color: #333333;
+    cursor: pointer;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    margin: 0;*margin:0px;
+    min-width: 70px;*min-width:70px; 
+    overflow: hidden !important;
+    padding: 0 0 0 3px;
+    width: 70%;
+}
+.calInputdiv input{
+	height: 26px;*height:26px;
+	line-height: 26px;*line-height:26px;
+}
+.calInputdiv30 input {
+	 height:30px;*height:30px; 
+	 line-height:30px;*line-height:30px;
+	 overflow:visible;
+}
+.calInputdiv i,.calInputdiv30 i {
+    background: url(../../resources/calendarinputimg.jpg) no-repeat 0 center;
+    cursor: pointer;
+    float: right;
+    margin-right: 0;
+    margin-top: 0;*margin-top:0px;
+    overflow: hidden !important;
+    width: 24px;
+}
+.calInputdiv i{
+	height: 26px;
+}
+.calInputdiv30 i {
+	height: 30px;
+}
+.dfCalendarPanel{ 
+	width:190px; 
+	border:1px solid #bbb; 
+	margin:7px; 
+	position:absolute; 
+	z-index:999;  
+	background-color:#ffffff;
+	box-shadow: 0 7px 21px rgba(0, 0, 0, 0.1); 
+	border-radius:4px;
+}
+.dfCalText24,.dfCalText20{ 
+	font-family:"微软雅黑"; 
+	font-size:14px; 
+	float:left; 
+	text-align:center;
+}
+.dfCalText24{
+	height:20px;
+	width:16px; 
+	line-height:20px; 
+}
+.dfCalText20{ 
+	height:18px; 
+	width:18px; 
+	line-height:18px; 
+}
+
+/*****日历躯部*****/
+.dfCalBody{
+	background-color:#ffffff; 
+}
+/*****白边，高光区*****/
+.borderWhite{ 
+	float:left; 
+	width:1px; 
+	height:28px;
+}
+/*****日历躯部主体*****/
+.dfCalendar{ 
+	width:168px;
+	height:auto; 
+	margin-top:10px; 
+	margin-left:10px; 
+	float:left;
+}
+.dfCalYear{ 
+	text-align:center; 
+	float:left; 
+	width:168px; 
+	height:28px; 
+}
+.dfCalYearGo{ 
+	width:16px; 
+	height:16px; 
+	float:left; 
+	cursor:pointer; 
+	margin-top:3px;
+}
+.dfCalYearLeftGo{  
+	background:url(../../resources/left-2.fw.png);  
+}
+.dfCalMonthLeftGo{ 
+	background:url(../../resources/left-1.fw.png);
+	margin-right:5px;
+}
+.dfCalYearRightGo{ 
+	background:url(../../resources/right-2.fw.png);
+}
+.dfCalMonthRightGo{ 
+	border-right:0px; 
+	background:url(../../resources/right-1.fw.png); 
+}
+.dfCalYearLeftGo,.dfCalMonthLeftGo,.dfCalYearRightGo,.dfCalMonthRightGo{ 
+	background-size:16px 16px;
+}
+.dfCalYearNum{  
+	float:left; 
+	border:1px dotted #bbb; 
+	width:36px; 
+	height:18px; 
+	position:relative;
+}
+.dfCalYearInput,.dfCalMonthInput{ 
+	height:18px; 
+	float:left; 
+	border:0px; 
+	padding:0; 
+	margin:0; 
+	text-align:center; 
+}
+.dfCalYearInput{ 
+	width:35px;
+}
+.dfCalMonthInput{ 
+	width:19px;
+}
+.dfCalMonthNum{ 
+	width:20px; 
+	height:18px; 
+	float:left;
+	border:1px dotted #bbb; 
+	position:relative;
+}
+
+.dfCalWeek{ 
+	width:168px; 
+	height:27px; 
+	float:left;
+	font-weight:bold;
+}
+
+/*****日历日期按钮*****/
+.dfCalDateTable{ 
+	width:168px; 
+	height:147px; 
+	float:left;
+	position:relative;
+}
+.tdDatePanel{ 
+	font-family:Arial; 
+	font-size:12px; 
+	line-height:24px; 
+	text-align:center; 
+	width:24px; 
+	height:24px; *height:24px; 
+	padding:0; 
+	margin:0; 
+	cursor:default;
+}
+.dfCalNormalDay{
+	color:#333333;
+}
+.dfCalCurrentDay{
+	color:#0077b3;
+}
+.dfCalThisDay{
+	background-color:#0077b3; 
+	border-color:#0077b3; 
+	border-radius:3px;
+	color:#fff;
+}
+.dfCalNoThisMonth{
+	color:#d9d9d9;
+}
+.dfCalOutOfLimit{
+	color:#999;
+}
+table tr .tdDatePanel:first-child{ 
+	border-left:0px;
+}
+
+/*****时间展示区域*****/
+.dfCalSelectTime{ 
+	width:168px; 
+	height:28px; 
+	float:left; 
+	margin-top:1px; 
+	border-top:1px solid #bbbbbb;
+}
+.dfCalHour{ 
+	width:20px; 
+	height:18px; 
+	border:1px dotted #bbb; 
+	float:left;  
+	position:relative;
+}
+.dfCalHourInput,.dfCalMinuteInput,.dfCalSecondInput{
+	width:19px; 
+	height:18px; 
+	border:0px;
+	float:left; 
+	position:absolute;
+	padding:0; 
+	margin:0; 
+	text-align:center;
+}
+.dfCalMinute,.dfCalSecond{ 
+	height:18px; 
+	width:20px; 
+	border:1px dotted #bbb; 
+	float:left;  
+	position:relative;
+}
+
+/*****禁止输入中文等双字节字符*****/
+.dfCalendarTimeInput{
+	ime-mode:disabled;
+}
+
+/*****日历按钮区域*****/
+.dfCalButtonArea{ 
+	background-color:#ffffff; 
+}
+.dfCalButton{ 
+	font:12px "宋体"; 
+	text-align:center; 
+	line-height:20px; 
+	width:40px; 
+	height:20px; 
+	margin:5px 3px 10px 0px; 
+	float:left; 
+	cursor:pointer; 
+	border-radius:3px;
+	background-color: #0088CC;
+	border-color: #0088CC; 
+	color:#fff;
+}
+.dfCurrentButton{ 
+	margin-left:10px;
+}
+
+
+/*****灰暗输入框精度*****/
+.dfCalMinShadow{
+	width:20px; 
+	height:18px;
+	background-color:#6e6e6e; 
+	filter:alpha(Opacity=60); 
+	-moz-opacity:0.6; 
+	opacity:0.6; 
+	z-index:10000; 
+	position:absolute;
+	float:left;
+	left:0; 
+	top:0; 
+}
+.dfCalMaxShadow{
+	width:168px; 
+	height:150px;
+	background-color:#6e6e6e; 
+	filter:alpha(Opacity=60); 
+	-moz-opacity:0.6; 
+	opacity:0.6; 
+	z-index:10000; 
+	position:absolute;
+	float:left;
+	left:0; 
+	top:0; 
+}

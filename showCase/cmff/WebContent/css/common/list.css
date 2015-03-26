@@ -1,0 +1,45 @@
+@charset "utf-8";
+/*****************列表******************/
+.list{ display:block;}
+.table{
+	border-collapse: collapse; 
+	font-family: "微软雅黑"; 
+	font-size: 12px; 
+	padding: 0;
+}
+.table th {
+	background-color:#aeaeae; 
+	border: 1px solid #BBBBBB; 
+	color: #fff; 
+	font-size: 16px; 
+	height: 30px; 
+	line-height: 30px; 
+	text-align: center; 
+	white-space: nowrap;
+}
+.table td { 
+	border: 1px solid #BBBBBB; 
+	line-height: 30px; 
+	height: 30px; 
+	text-align:center;
+	vertical-align:middle;
+}
+.table tr:even{ 
+	background:#fff;
+}
+.table tr:nth-child(2n+1){ 
+	background:#f2f2f2;
+}
+.checkbox-th{ 
+	max-width:80px;width:40px;
+}
+.table .handle{
+	max-width:200px;width:120px;
+}
+.table .modify{
+	color:#ffa622;
+	margin-right:10px;
+}
+.table .delete{
+	color:red;
+}

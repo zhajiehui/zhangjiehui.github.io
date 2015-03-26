@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tab页1</title>
+<link href="css/common/tab1.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/common/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="js/common/tab1.js"></script>
+</head>
+
+<body onResize="ReSet()" onLoad="ReSet()">
+<!--tab begin-->
+	<div id="myTab" class="myTab">
+		<div class="tabContent">
+			<!-- 页卡1的内容 -->
+			<div class="tab_content" style="height:460px;">
+				<iframe src="http://www.baidu.com" frameborder="0" width="100%" height="100%" ></iframe>
+			</div>
+			<!-- 页卡2的内容 -->
+			<div class="tab_content" style="display:none">内容二</div>
+			<!-- 页卡3的内容 -->
+			<div class="tab_content" style="display:none">内容三</div>
+		</div>
+		
+	    
+		<div class="tabTitle">
+		<!-- 	<span class="ScrollBtn ScrollBtnLeft"></span>
+			<span class="ScrollBtn ScrollBtnRight"></span> -->
+			<ul>	
+				<li id="tabSelect">页卡1<a class="tab_close"></a></li>
+				<li>页卡2<a class="tab_close"></a></li>
+				<li>页卡3<a class="tab_close"></a></li>
+				<li>*</li>
+			</ul>
+		</div>
+		
+	</div>
+	<!--tab end-->
+</body>
+</html>

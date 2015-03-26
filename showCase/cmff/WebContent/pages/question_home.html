@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>二级导航-问题首页</title>
+<link href="../css/common/cmcc.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div class="view">
+<div class="bread">
+	<div>
+		<p>一级导航</p>
+	</div>
+	<div class="breadTo"></div>
+	<div>
+		<p>二级导航</p>
+	</div>
+	<div class="breadTo"></div>
+	<div>
+		<p>当前页面</p>
+	</div>
+</div>
+<section class="question-panelSet">
+	<ul class="content">
+		<li class="panel">
+			<header>
+				<span>未解决</span>|<span>1</span>
+			</header>
+			<div class="wrap">
+				<section class="panel-titles">
+					<ul>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</li>
+		<li class="panel">
+			<header>
+				<span>解决中</span>|<span>1</span>
+			</header>
+			<div class="wrap">
+				<section class="panel-titles">
+					<ul>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</li>
+		<li class="panel">
+			<header>
+				<span>已解决</span>|<span>1</span>
+			</header>
+			<div class="wrap">
+				<section class="panel-titles">
+					<ul>
+						<li class="task">
+							<b>问题标题</b>
+							<p>啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊</p>
+							<div class="user-pic" style="background-image:url(/cmcc/resources/userhead.gif)"></div>
+							<span>提出者</span>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</li>
+		<li class="panel"></li>
+	</ul>
+</section>
+</div>
+<script type="text/javascript" src="../js/common/jquery-1.7.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var num = $(".question-panelSet .panel").length * 400;
+	$(".question-panelSet .content").attr("style","width:"+num+"px;");
+});
+</script>
+</body>
+</html>

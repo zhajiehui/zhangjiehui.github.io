@@ -1,0 +1,21 @@
+.gridtreeHead1{min-width: 300px;}
+
+.gridtreeHead11{float:left; min-width:300px; height:30px; border-left: 1px solid #ccc;border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;text-align:center; line-height:30px;background-image: url(../image/leftMenuBg.png);}
+
+.gridtreeHead2{display: inline-block;width:92px;bottom:0;position:absolute;height:30px;background-image: url(../image/leftMenuBg.png);border-right: 1px solid #ccc;border-top: 1px solid #ccc; border-bottom: 1px solid #ccc;}
+
+.gridtreeHead3{display:inline-block;position:absolute;bottom:0;margin-left:92px}
+
+.gridtreeHead31{float:left; min-width:100px; height:30px; border: 1px solid #ccc; text-align:center; line-height:30px;background-image: url(../image/leftMenuBg.png);}
+
+.treenodeContent{white-space:nowrap;overflow: hidden;text-overflow:ellipsis;display: inline-block;}
+
+.treenodeContent1{white-space:nowrap;overflow: hidden;text-overflow:ellipsis;display: inline-block;}
+
+.treenodeContent2{white-space:nowrap;overflow: hidden;text-overflow:ellipsis;display: inline-block;}
+
+.gridtreeBody2{display: inline-block;width:92px;bottom:0;position:absolute;height:24px;}
+
+.gridtreeBody3{display: inline-block;position:absolute;bottom:0;left:292px;}
+
+.gridtreeBody31{float:left; min-width:100px; height:23px; border: 1px solid #ccc; text-align:center; line-height:30px}

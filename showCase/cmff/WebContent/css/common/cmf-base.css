@@ -1,0 +1,174 @@
+@charset "utf-8";
+/* CSS Document */
+/*通用属性*/
+*{ -moz-box-sizing:border-box;}
+html,body{
+	font-family: "黑体-cs";
+	font-size:14px;
+	color:#333;
+}
+
+a{
+	color:#fff; 
+	cursor:pointer; 
+	text-decoration:none;
+}
+ul,ol{ 
+	list-style: none outside none; 
+	margin:0; 
+	padding:0;
+}
+li{ 
+	line-height:20px; 
+	list-style:none outside none;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{ display:block;}
+.icon{ 
+	display:inline-block; 
+	text-decoration:none;
+}
+.collapse {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: height 350ms ease 0s;
+}
+.navbar{ overflow:visible;}
+.navbar-fixed-top{ 
+	top:0; 
+	left:0; 
+	margin-bottom:0; 
+	position:fixed; 
+	right:0;
+}
+
+/*下拉三角号*/
+.caret{ 
+	border-right:4px solid rgba(0,0,0,0); 
+	border-left:4px solid rgba(0,0,0,0); 
+	border-top:4px solid #7c7c7c; 
+	content:""; 
+	display:inline-block; 
+	height:0; 
+	margin-left:5px; 
+	vertical-align:middle; 
+	width:0;
+}
+
+/*右浮动*/
+.pull-right{ float:right;}
+
+/*按钮*/
+button::-moz-focus-inner{
+	border:0;
+}
+button:hover{
+	opacity:0.8;
+}
+.btn {
+    -moz-user-select: none;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 10px 24px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    outline: 0;
+}
+.btn-primary {
+    background-color: #cc6666;
+}
+.btn-default{
+	background-color: #0099ff;
+}
+.btn-disabled{
+	background-color: #ccc;
+}
+.btn-fixed80{
+	outline: 0;
+	width:80px;
+	height:40px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 0;
+    font-size: 20px;
+}
+
+/*复选框*/
+.check-box {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+	margin:0 auto;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    width: 22px;
+}
+.check-box i {
+    background:url(../resources/check_mark.png) no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: -17px;
+    height: 16px;
+    left: 3px;
+    opacity: 0.5;
+    position: absolute;
+    transition: all 400ms ease-in-out 0s;
+    width: 16px;
+	-o-transform: rotateZ(-180deg); /* Opera浏览器 */
+	-webkit-transform:rotateZ(-180deg); /* Webkit内核浏览器 */
+	-moz-transform: rotateZ(-180deg); /* Firefox浏览器 */
+}
+.check-box input[type="checkbox"] {
+    visibility: hidden;
+}
+.checkedBox {
+    border-bottom-color: #FFFFFF;
+    box-shadow: 0 0 5px 1px #CCCCCC inset;
+}
+.checkedBox i {
+    bottom: 2px;
+	-o-transform: rotateZ(0deg); /* Opera浏览器 */
+	-webkit-transform:rotateZ(0deg); /* Webkit内核浏览器 */
+	-moz-transform: rotateZ(0deg); /* Firefox浏览器 */
+}
+
+/*单选框*/
+.radio-box{
+	 border: 1px solid #CCCCCC;
+	 border-radius: 32px;
+	 width:22px;
+	 height:22px;
+	 position: relative;
+	 cursor: pointer;
+     display: block;
+     overflow:hidden;
+}
+.radio-box input[type="radio"] {
+    visibility: hidden;
+}
+.radio-box i {
+    background:url(../../resources/disc.png) no-repeat scroll center center rgba(0, 0, 0, 0);
+    background-size:16px 16px;
+    bottom: -17px;
+    height: 16px;
+    left: 2px;
+    opacity:0.2;
+    position: absolute;
+    width: 16px;
+}
+.radiochecked i {
+    bottom: 2px;
+}

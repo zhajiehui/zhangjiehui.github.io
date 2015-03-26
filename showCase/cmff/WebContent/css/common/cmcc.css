@@ -1,0 +1,904 @@
+/*****
+*	css样式编写结构大框
+*		一般性样式：
+*			主体样式
+*			reset样式
+*			链接
+*			标题
+*		
+*		辅助样式：
+*			表单
+*			通用和错误
+*			一致的条目
+*			
+*		页面结构：
+*			标题、页脚和导航
+*			布局
+*			其他页面结构元素
+*		
+*		页面组件：
+*			各个页面
+*			
+*		覆盖：然后使用大注释块来分割每个部分
+*		/* @group general styles
+*		------------------------------------------------------------*/
+*		/*而小区域可以用小块注释
+*		/* nav */
+*		/*	用@tudo        表示某些东西需要后期修改、修复或复查
+*			用@bugfix      表示代码或特定浏览器遇到的问题
+*			用@workaround  表示并不完善的权宜之技
+*/
+/*----------------一般性样式(主体样式)-----------------*/
+body{
+	font-family: "黑体-cs";
+	font-size:18px;
+	color:#333;
+}
+ul,li，ol{
+	list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.pointer{
+	cursor:pointer;
+}
+/*----------------辅助样式(表单)-----------------*/
+/*input*/
+.stanInput{
+	border:1px solid #ccc;
+	height:28px;
+	width:280px;
+	border-radius:4px;
+}
+/*select下拉框*/
+.sel_wrap {
+	width: 280px;
+	height: 30px;
+	border: 1px solid #ccc;
+	cursor: pointer;
+	position: relative; 
+	border-radius:4px;
+	display:inline-block;
+}
+.sel_wrap span {
+	line-height: 30px;*line-height: 25px;
+	padding-left: 10px;
+	font-size: 14px;color:#3f3f3f ;
+	position: relative;	
+}
+.sel_wrap select {
+	width: 100%;height: 30px;*height:28px;	font-size: 12px; color: #3f3f3f;
+	position: absolute;
+	padding: 0;cursor: pointer;top: 0;left: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0);  opacity: 0; 
+	margin:0px;*margin-top:5px;margin-right: 0px;margin-left:0px;margin-bottom: 0px;
+}
+.sel_wrap select option{ 
+	padding:4px 6px;
+}
+.select-icon{ 
+	background:url(../../resources/left-1.fw.png) no-repeat; 
+	transform:rotate(-90deg); 
+	width:18px; 
+	height:18px; 
+	background-size:18px 18px; 
+	float:right; 
+	margin-top:6px; 
+	margin-right:10px;
+}
+/*按钮*/
+button::-moz-focus-inner{
+	border:0;
+}
+button:hover{
+	opacity:0.8;
+}
+.btn {
+    -moz-user-select: none;
+    background-color: #FFFFFF;
+    border: 0;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding: 10px 24px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    outline: 0;
+}
+.btn-primary {
+    background-color: #cc6666;
+}
+.btn-default{
+	background-color: #0099ff;
+}
+.btn-disabled{
+	background-color: #ccc;
+}
+.btn-fixed80{
+	outline: 0;
+	width:80px;
+	height:40px;
+	border-radius: 4px;
+	cursor: pointer;
+	color: #fff;
+	display: inline-block;
+	text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    border: 0;
+    font-size: 20px;
+}
+/*复选框*/
+.check-box {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+	margin:0 auto;
+    height: 22px;
+    overflow: hidden;
+    position: relative;
+    width: 22px;
+}
+.check-box i {
+    background:url(../../resources/check_mark.png) no-repeat scroll center center rgba(0, 0, 0, 0);
+    bottom: -17px;
+    height: 16px;
+    left: 3px;
+    opacity: 0.5;
+    position: absolute;
+    transition: all 400ms ease-in-out 0s;
+    width: 16px;
+	-o-transform: rotateZ(-180deg); /* Opera浏览器 */
+	-webkit-transform:rotateZ(-180deg); /* Webkit内核浏览器 */
+	-moz-transform: rotateZ(-180deg); /* Firefox浏览器 */
+}
+.check-box input[type="checkbox"] {
+    visibility: hidden;
+}
+.checkedBox {
+    border-bottom-color: #FFFFFF;
+    box-shadow: 0 0 5px 1px #CCCCCC inset;
+}
+.checkedBox i {
+    bottom: 2px;
+	-o-transform: rotateZ(0deg); /* Opera浏览器 */
+	-webkit-transform:rotateZ(0deg); /* Webkit内核浏览器 */
+	-moz-transform: rotateZ(0deg); /* Firefox浏览器 */
+}
+
+/*单选框*/
+.radio-box{
+	 border: 1px solid #CCCCCC;
+	 border-radius: 32px;
+	 width:22px;
+	 height:22px;
+	 position: relative;
+	 cursor: pointer;
+     display: block;
+     overflow:hidden;
+}
+.radio-box input[type="radio"] {
+    visibility: hidden;
+}
+.radio-box i {
+    background:url(../../resources/disc.png) no-repeat scroll center center rgba(0, 0, 0, 0);
+    background-size:16px 16px;
+    bottom: -17px;
+    height: 16px;
+    left: 2px;
+    opacity:0.2;
+    position: absolute;
+    width: 16px;
+}
+.radiochecked i {
+    bottom: 2px;
+}
+/*----------------辅助样式(通用和错误)-----------------*/
+/*
+*	@workaround说明：辅助样式均用简写
+*	margin--mar;padding--pad;top--t;bottom--b;left--l;right--r;width--wth;length--lth;
+*   样式后面使用"-",控件或结构后面使用"_"
+*/
+.parting_line{
+	width:90%;
+	height:1px;
+	border-top:1px solid #ccc;
+	margin-bottom:30px;
+}
+.parting_line1{
+	width:100%;
+	height:1px;
+	border-top:1px solid #ccc;
+	margin-top:30px;
+}
+.font-bold{
+	font-weight:bold;
+}
+.sel_wth490{
+	width:490px;
+}
+.mar-t20{
+	margin-top:20px;
+}
+.mar-b20{
+	margin-bottom:20px;
+}
+/*----------------页面结构(其他页面结构元素)-----------------*/
+/*--标签tag--*/
+.tagGroup{
+	height:52px;
+	background-color:#fff;
+	color:#727272;
+	border-bottom:1px solid #ccc;
+	font-weight:600;
+}
+.tagGroup ul{
+	list-style:none;
+	margin:0 auto;
+}
+.tagGroup ul > li{
+	float:left;
+	height:48px;
+	line-height:48px;
+	width:160px;
+	text-align:center;
+	cursor:pointer;
+}
+.tagGroup ul > li.selected:after,.tagGroup ul > li.hover:after,.tagGroup ul > li#tagSelect:after{
+	content:"";
+	width:160px;
+	background:#0099ff;
+	display:block;
+	height:4px;
+}
+.tag_content{
+  width:auto;
+  height:auto;
+  padding:5px;
+  clear:both;
+  height:570px;
+  min-height:570px;
+  padding-top:50px;
+  padding-left:45px;
+}
+/*--弹出框--*/
+/*透明背景*/
+.backdrop{
+	width:100%;
+	height:100%;
+	background-color:#000;
+	filter:alpha(opacity=0.5);
+	opacity:0.5;
+	position: fixed;
+	top:0px;
+	left:0px;
+	z-index:9998;
+}
+.win_border{
+	z-index:9999;
+	width:372px;
+	top:0;
+	left:0;
+}
+/*头部区域*/
+.win_header{
+	border-bottom: 1px solid rgba(0,0,0,0.07); 
+	background-color:#FFF; 
+	font-size: 16px; 
+	text-align:center; 
+	border-top-left-radius:4px;
+  border-top-right-radius:4px;
+	width:100%;
+}
+.win_name{
+	line-height:34px;
+	margin-left:10px;
+	color:#3f3f3f; 
+	font-family:"微软雅黑"; 
+	font-size:16px;
+}
+.win_cancel{
+	background:url(../../resources/u372.png) no-repeat; 
+	background-size:17px 17px;
+	cursor:pointer;
+	right:15px;
+	top:10px;
+	width:17px;
+	height:17px;
+	position:absolute;
+}
+.win_name_alert{
+	line-height:34px;
+	color:#3f3f3f; 
+	font-family:"微软雅黑"; 
+	font-size:16px;
+	margin:0;
+}
+
+/*躯干区域*/
+.win_body{
+	border-top:0px;
+	background:#fff;
+	padding:10px;
+	height:100%;
+}
+.win_body_title{
+	color:#ccc; 
+	font-size:14px; 
+	font-weight:bold;
+}
+
+.win_body_alert{
+	font-size:12px;
+	color:#3f3f3f;
+	margin-top:30px;
+	text-indent:2em;
+	width:330px;
+	height:78px;
+}
+.popup .win_body{
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px; 
+}
+/*脚部区域*/
+.disp_footer{
+  background-color:#fff;
+	border-bottom-left-radius:4px;
+	border-bottom-right-radius:4px; 
+	border-bottom:1px solid #bbbbbb; 
+	padding:10px;
+}
+/*提示框*/
+.hint .btn{ width:100%;}
+/*确认框*/
+.confirm .btn{ width:49%;}
+.confirm ul > li{ display:inline; margin-left:7px;}
+.confirm ul > li:first-child { margin:0;}
+/*----------------页面组件-----------------*/
+/******日历输入框  高度为26px和30px******/
+.calInputdiv.btn,.calInputdiv30 {
+	width:280px;
+	min-width:100px;
+	height:30px;
+	border-radius:4px;
+	margin: 0; 
+	padding: 0;
+	text-align:left;
+	position:relative;
+	display: block;
+	vertical-align: middle; 
+	border: 1px solid #ccc;
+	background-color: transparent !important;
+	overflow: hidden !important;
+}
+.calInputdiv.btn{
+	height:30px;*height:30px;
+}
+ .calInputdiv30{
+	height:30px;*height:30px;
+	width:98%;
+}
+.calInputdiv input,.calInputdiv30 input {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border: 0 solid #BBBBBB;
+    color: #333333;
+    cursor: pointer;
+    float: left;
+    font-family: "宋体";
+    font-size: 12px;
+    margin: 0;*margin:0px;
+    min-width: 70px;*min-width:70px; 
+    overflow: hidden !important;
+    padding: 0 0 0 3px;
+    width: 70%;
+}
+.calInputdiv input{
+	height: 30px;*height:30px;
+	line-height: 30px;*line-height:30px;
+}
+.calInputdiv30 input {
+	 height:30px;*height:30px; 
+	 line-height:30px;*line-height:30px;
+	 overflow:visible;
+}
+.calInputdiv i,.calInputdiv30 i {
+    background: url(../../resources/u304.png) no-repeat 0 center;
+    background-size:24px 24px;
+    cursor: pointer;
+    float: right;
+    margin-right: 5px;
+    margin-top: 0;*margin-top:0px;
+    overflow: hidden !important;
+    width: 24px;
+}
+.calInputdiv i{
+	height: 24px;
+	margin-top:3px;
+}
+.calInputdiv30 i {
+	height: 30px;
+}
+.dfCalendarPanel{ 
+	width:190px; 
+	border:1px solid #bbb; 
+	margin:7px; 
+	position:absolute; 
+	z-index:999;  
+	background-color:#ffffff;
+	box-shadow: 0 7px 21px rgba(0, 0, 0, 0.1); 
+	border-radius:4px;
+}
+.dfCalText24,.dfCalText20{ 
+	font-family:"微软雅黑"; 
+	font-size:14px; 
+	float:left; 
+	text-align:center;
+}
+.dfCalText24{
+	height:20px;
+	width:16px; 
+	line-height:20px; 
+}
+.dfCalText20{ 
+	height:18px; 
+	width:18px; 
+	line-height:18px; 
+}
+
+/*****日历躯部*****/
+.dfCalBody{
+	background-color:#ffffff; 
+}
+/*****白边，高光区*****/
+.borderWhite{ 
+	float:left; 
+	width:1px; 
+	height:28px;
+}
+/*****日历躯部主体*****/
+.dfCalendar{ 
+	width:168px;
+	height:auto; 
+	margin-top:10px; 
+	margin-left:10px; 
+	float:left;
+}
+.dfCalYear{ 
+	text-align:center; 
+	float:left; 
+	width:168px; 
+	height:28px; 
+}
+.dfCalYearGo{ 
+	width:16px; 
+	height:16px; 
+	float:left; 
+	cursor:pointer; 
+	margin-top:3px;
+}
+.dfCalYearLeftGo{  
+	background:url(../../resources/left-2.fw.png);  
+}
+.dfCalMonthLeftGo{ 
+	background:url(../../resources/left-1.fw.png);
+	margin-right:5px;
+}
+.dfCalYearRightGo{ 
+	background:url(../../resources/right-2.fw.png);
+}
+.dfCalMonthRightGo{ 
+	border-right:0px; 
+	background:url(../../resources/right-1.fw.png); 
+}
+.dfCalYearLeftGo,.dfCalMonthLeftGo,.dfCalYearRightGo,.dfCalMonthRightGo{ 
+	background-size:16px 16px;
+}
+.dfCalYearNum{  
+	float:left; 
+	border:1px dotted #bbb; 
+	width:36px; 
+	height:18px; 
+	position:relative;
+}
+.dfCalYearInput,.dfCalMonthInput{ 
+	height:18px; 
+	float:left; 
+	border:0px; 
+	padding:0; 
+	margin:0; 
+	text-align:center; 
+}
+.dfCalYearInput{ 
+	width:35px;
+}
+.dfCalMonthInput{ 
+	width:19px;
+}
+.dfCalMonthNum{ 
+	width:20px; 
+	height:18px; 
+	float:left;
+	border:1px dotted #bbb; 
+	position:relative;
+}
+
+.dfCalWeek{ 
+	width:168px; 
+	height:27px; 
+	float:left;
+	font-weight:bold;
+}
+
+/*****日历日期按钮*****/
+.dfCalDateTable{ 
+	width:168px; 
+	height:147px; 
+	float:left;
+	position:relative;
+}
+.tdDatePanel{ 
+	font-family:Arial; 
+	font-size:12px; 
+	line-height:24px; 
+	text-align:center; 
+	width:24px; 
+	height:24px; *height:24px; 
+	padding:0; 
+	margin:0; 
+	cursor:default;
+}
+.dfCalNormalDay{
+	color:#333333;
+}
+.dfCalCurrentDay{
+	color:#0077b3;
+}
+.dfCalThisDay{
+	background-color:#0077b3; 
+	border-color:#0077b3; 
+	border-radius:3px;
+	color:#fff;
+}
+.dfCalNoThisMonth{
+	color:#d9d9d9;
+}
+.dfCalOutOfLimit{
+	color:#999;
+}
+table tr .tdDatePanel:first-child{ 
+	border-left:0px;
+}
+
+/*****时间展示区域*****/
+.dfCalSelectTime{ 
+	width:168px; 
+	height:28px; 
+	float:left; 
+	margin-top:1px; 
+	border-top:1px solid #bbbbbb;
+}
+.dfCalHour{ 
+	width:20px; 
+	height:18px; 
+	border:1px dotted #bbb; 
+	float:left;  
+	position:relative;
+}
+.dfCalHourInput,.dfCalMinuteInput,.dfCalSecondInput{
+	width:19px; 
+	height:18px; 
+	border:0px;
+	float:left; 
+	position:absolute;
+	padding:0; 
+	margin:0; 
+	text-align:center;
+}
+.dfCalMinute,.dfCalSecond{ 
+	height:18px; 
+	width:20px; 
+	border:1px dotted #bbb; 
+	float:left;  
+	position:relative;
+}
+
+/*****禁止输入中文等双字节字符*****/
+.dfCalendarTimeInput{
+	ime-mode:disabled;
+}
+
+/*****日历按钮区域*****/
+.dfCalButtonArea{ 
+	background-color:#ffffff; 
+}
+.dfCalButton{ 
+	font:12px "宋体"; 
+	text-align:center; 
+	line-height:20px; 
+	width:40px; 
+	height:20px; 
+	margin:5px 3px 10px 0px; 
+	float:left; 
+	cursor:pointer; 
+	border-radius:3px;
+	background-color: #0088CC;
+	border-color: #0088CC; 
+	color:#fff;
+}
+.dfCurrentButton{ 
+	margin-left:10px;
+}
+
+
+/*****灰暗输入框精度*****/
+.dfCalMinShadow{
+	width:20px; 
+	height:18px;
+	background-color:#6e6e6e; 
+	filter:alpha(Opacity=60); 
+	-moz-opacity:0.6; 
+	opacity:0.6; 
+	z-index:10000; 
+	position:absolute;
+	float:left;
+	left:0; 
+	top:0; 
+}
+.dfCalMaxShadow{
+	width:168px; 
+	height:150px;
+	background-color:#6e6e6e; 
+	filter:alpha(Opacity=60); 
+	-moz-opacity:0.6; 
+	opacity:0.6; 
+	z-index:10000; 
+	position:absolute;
+	float:left;
+	left:0; 
+	top:0; 
+}
+
+/*----------------各个页面-----------------*/
+/*二级导航-项目首页(project_home.html)*/
+.tag_content ul{
+	list-style:none;
+}
+.tag_content ul>li{
+	margin-bottom:30px;
+	overflow:auto;
+}
+.tag_content ul>li:last-child{
+	margin:0;
+}
+.tag_content ul>li .radio-box{
+	display:inline-block;
+	margin-top:4px;
+}
+.tag_content ul>li .radio-box i{
+	left:3px;
+	height:18px;
+}
+
+.tag_content ul>li .radio .radio-wrap{
+	height:30px;
+	line-height:30px;
+}
+.tag_content ul>li img.user{
+	background-size:44px 44px; 
+	width:44x; 
+	height:44px;
+	border-radius:100px;
+}
+.tag_content .userGroup{
+	width:420px;
+	height:auto;
+	float:left;
+	font-size:14px;
+}
+.tag_content .userGroup>ul>li{
+	float:left;
+	margin-right:50px;
+	margin-bottom:30px;
+}
+.tag_content .userGroup>ul>li>ul{
+	padding:0;
+}
+.tag_content .userGroup>ul>li>ul>li{
+	margin:0;
+	text-align:center;
+}
+.tag_content .userGroup>ul>li>ul>li:first-child{
+	margin-bottom:10px;
+}
+.tag_content .userGroup>ul>li>ul>li span{
+	text-align:center;
+}
+.tag_content .proUserGroup>li:first-child{
+	margin-top:30px;
+}
+.tag_content .addRole{
+	background:url("../../resources/plus_alt.png");
+	background-size:24px 24px;
+	width:24px;
+	height:24px;
+	display:inline-block;
+	margin-right:10px;
+	cursor:pointer;
+}
+.infoTitle{
+	float:left;
+	width:100px;
+	height:30px;
+	line-height:30px;
+	text-align:right;
+	margin-right:10px;
+}
+.roleSet{
+	text-decoration:none;
+	cursor:pointer;
+}
+.con_wth500{
+	width:500px;
+}
+.proUserGroup div>p{
+	display: inline-block;
+    height: 44px;
+    line-height: 44px;
+    margin: -33px 0 0;
+    vertical-align: middle;
+}
+.proUserGroup span{
+	height:44px;
+}
+.proUserGroup div>p.deleteUser{
+	float:right;
+	margin:0;
+	cursor:pointer;
+	color:#ff0033;
+}
+.powerSetPanel{
+	display:none;
+	position:absolute;
+	top:1px;
+	right:1px;
+	border:1px solid #ccc;
+	background-color:#ccc;
+	width:480px;
+	height:auto;
+}
+.powerSetPanel .check-box{
+	margin-right:10px;
+	float:left;
+}
+.powerSetPanel .win_body{
+	padding:30px;
+}
+.powerSetPanel .win_body li{
+	margin-bottom:20px;
+}
+.powerSetPanel .win_body li>ul{
+	margin-top:20px;
+	margin-left:40px;
+	overflow:auto;
+}
+.powerSetPanel .win_body li>ul>li{
+	float:left;
+	margin-left:45px;
+	margin-bottom:0;
+}
+.powerSetPanel .win_body li>ul>li:first-child{
+	margin-left:0;
+}
+.powerSetPanel .win_body span{
+	height:22px;
+	line-height:22px;
+}
+.disp_footer .center{
+	margin: 0 auto;
+    width: 180px;
+}
+.disp_footer .center>button{
+	margin-left:10px;
+}
+.disp_footer .center>button:first-child{
+	margin:0;
+}
+.powerSetPanel .win_header,.powerSetPanel .win_body,.powerSetPanel .disp_footer{
+	background:#f2f2f2;
+	border:0;
+	border-radius:0;
+}
+/*二级导航-问题首页(question_home.html)*/
+.view{
+	height:100%;
+}
+.bread{
+	height:60px;
+	width:100%;
+	border-bottom:1px solid #ccc;
+	margin-bottom:10px;
+}
+.bread>div{
+	float:left;
+}
+.bread>div>p{
+	margin:21px 0;
+}
+.bread>div:first-child{
+	margin-left:30px;
+}
+.bread .breadTo{
+	background:url(../../resources/u458.png);
+	width:10px;
+	height:20px;
+	margin:20px 30px;
+}
+.question-panelSet{
+	overflow-x:auto;
+	overflow-y:hidden;
+	width:1250px;
+	height:100%;
+}
+.question-panelSet .content{
+	height:472px;
+}
+.question-panelSet>ul>li{
+	width:388px;
+	height:470px;
+	border:1px solid #ccc;
+	float:left;
+	vertical-align:top;
+	margin-left:10px;
+	border-radius:4px;
+}
+.question-panelSet .panel header{
+	padding:25px 30px;
+	font-weight:bold;
+}
+.question-panelSet .panel header>span{
+	margin-right:20px;
+	margin-left:20px;
+}
+.question-panelSet .panel .wrap{
+	
+}
+.question-panelSet .panel .wrap .panel-titles{
+	height: 402px;
+    overflow-x: visible;
+    overflow-y: auto;
+    position: static;
+    margin-left:20px;
+}
+.question-panelSet .panel .wrap .panel-titles ul{
+	margin-right:20px;
+}
+.question-panelSet .panel .wrap .task{
+	border:1px solid #ccc;
+	margin-bottom:10px;
+	padding:10px;
+}
+.user-pic{
+	background-size: 24px 24px;
+    height: 24px;
+    margin-top: -4px;
+    width: 24px;
+    border-radius:100px;
+    display:inline-block;
+}
+.task>p{
+	margin:5px 0;
+	text-indent:2em;
+}
+.task>span{
+	height:24px;
+	line-height:24px;
+	display:inline-block;
+	margin-top: -12px;
+    vertical-align: middle;
+}

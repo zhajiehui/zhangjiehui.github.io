@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>二级导航-项目首页</title>
+<link href="../css/common/cmcc.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<!--tag begin-->
+	<div id="myTag" class="myTag">
+		<div class="tagTitle tagGroup">
+			<ul>	
+				<li data-tabId="basicInfo" id="tagSelect">项目基础信息</li>
+				<li data-tabId="manageRole">项目管理角色</li>
+				<li data-tabId="architecture">项目组织结构</li>
+				<li data-tabId="participents">项目成员列表</li>
+			</ul>
+		</div>
+		<div class="tagContent">
+			<!-- 页卡1的内容 -->
+			<div class="tag_content" data-contentid="basicInfo">
+				<ul>
+					<li><span class="infoTitle">项目编码</span> <input class="stanInput"/></li>
+					<li><span class="infoTitle">项目名称</span> <input class="stanInput"/></li>
+					<li>
+						<span class="infoTitle">项目所属部门</span>
+						<div class="sel_wrap">
+							<span class="selectspan">--请选择--</span> 
+	    					<a class="select-icon"></a>
+							<!--设置下拉框的id  -->
+							<select class="inputselect"  id="selw2"></select>
+						</div>
+					</li>
+					<li>
+						<span class="infoTitle">预计启动时间</span>
+						<div class="calInputdiv btn">
+							<input class="calInput" type="text">
+							<i class="start-date-picker-toggle"></i>
+						</div>
+					</li>
+					<li>
+						<span class="infoTitle">预计结束时间</span>
+						<div class="calInputdiv btn">
+							<input class="calInput" type="text">
+							<i class="start-date-picker-toggle"></i>
+						</div>
+					</li>
+					<li>
+						<div class="radio">
+							<span class="infoTitle">单选框</span>
+							<div class="radio-wrap">
+							<div class="radio-box"><i><input name="radio-box" type="radio" class="radioInput"/></i></div>外包
+							<div class="radio-box"><i><input name="radio-box" type="radio" class="radioInput"/></i></div>自建
+							</div>
+						</div>
+					</li>
+					<li>
+						<span class="infoTitle">父项目</span>
+						<div class="sel_wrap">
+							<span class="selectspan">--请选择--</span> 
+	    					<a class="select-icon"></a>
+							<!--设置下拉框的id  -->
+							<select class="inputselect"  id="selw2"></select>
+						</div>
+					</li>
+					<li><span class="infoTitle">项目预算</span> <input class="stanInput"/></li>
+					<li>
+						<button type="button" class="btn-fixed80 btn-disabled">取消</button>
+						<button type="button" class="btn-fixed80 btn-primary">保存</button>
+						<button type="button" class="btn-fixed80 btn-default">提交</button>
+					</li>
+				</ul>
+			</div>
+			<!-- 页卡2的内容 -->
+			<div class="tag_content" data-contentid="manageRole" style="display:none">
+				<ul>
+					<li>
+						<span class="infoTitle">角色</span> 
+						<input class="stanInput"/> 
+						<a class="roleSet">权限配置</a>
+					</li>
+					<li>
+						<span class="infoTitle">成员</span>
+						<div class="userGroup">
+							<ul>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li><ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user pointer" src="../resources/plus_circle.gif"></a></li>
+										<li>添加成员</li>
+									</ul>
+								</li>
+								
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="parting_line"></div>
+				<ul>
+					<li>
+						<span class="infoTitle">角色</span> 
+						<input class="stanInput"/> 
+						<a class="roleSet">权限配置</a>
+					</li>
+					<li>
+						<span class="infoTitle">成员</span>
+						<div class="userGroup">
+							<ul>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li><ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user" src="../resources/u293.png"></a></li>
+										<li>zzz</li>
+									</ul>
+								</li>
+								<li>
+									<ul>
+										<li><a><img class="user pointer" src="../resources/plus_circle.gif"></a></li>
+										<li>添加成员</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<div class="parting_line"></div>
+				<ul>
+					<li>
+						<div class="addRole"></div>添加角色
+					</li>
+				</ul>
+			</div>
+			<!-- 页卡3的内容 -->
+			<div class="tag_content" data-contentid="architecture" style="display:none">内容三</div>
+			<!-- 页卡4的内容 -->
+			<div class="tag_content" data-contentid="participents" style="display:none">
+				<div class="con_wth500">
+					<ul>
+						<li>
+							<div class="sel_wrap sel_wth490">
+								<span class="selectspan">项目干系机构</span> 
+		    					<a class="select-icon"></a>
+								<!--设置下拉框的id  -->
+								<select class="inputselect"  id="selw2"></select>
+							</div>
+						</li>
+						<li>
+							<b>从平台用户中添加</b><br/>
+							<input class="stanInput sel_wth490 mar-t20"/>
+						</li>
+						<li>
+							<b>通过邮箱添加新成员</b><br/>
+							<input class="stanInput sel_wth490 mar-t20"/>
+						</li>
+						<li>
+							<b>通过链接添加新成员</b><br/>
+							<input class="stanInput sel_wth490 mar-t20"/>
+						</li>
+						<li>
+							<b>项目成员列表</b><br/>
+							<ul class="proUserGroup">
+								<li>
+									<div>
+										<a><img class="user" src="../resources/u293.png"></a>
+										<p>zzz</p>
+										<p class="deleteUser">移除成员</p>
+									</div>
+									<div class="parting_line1"></div>
+								</li>
+								<li>
+									<div>
+										<a><img class="user" src="../resources/u293.png"></a>
+										<p>zzz</p>
+										<p class="deleteUser">移除成员</p>
+									</div>
+									<div class="parting_line1 "></div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="powerSetPanel">
+		<header class="win_header">
+			<span class="win_name_alert" style="">权限配置</span>
+			<span class="win_cancel"></span>
+		</header>
+		<div class="win_body">
+			<ul>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目基础信息管理</span>
+				</li>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目资源管理</span>
+					<ul>
+						<li>
+							<div class="check-box">
+								<i><input name="check-box" type="checkbox"/></i>
+							</div>
+							<span>项目成员</span>
+						</li>
+						<li>
+							<div class="check-box">
+								<i><input name="check-box" type="checkbox"/></i>
+							</div>
+							<span>项目组织结构</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目基础信息管理</span>
+				</li>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目资源管理</span>
+					<ul>
+						<li>
+							<div class="check-box">
+								<i><input name="check-box" type="checkbox"/></i>
+							</div>
+							<span>项目成员</span>
+						</li>
+						<li>
+							<div class="check-box">
+								<i><input name="check-box" type="checkbox"/></i>
+							</div>
+							<span>项目组织结构</span>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目基础信息管理</span>
+				</li>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目基础信息管理</span>
+				</li>
+				<li>
+					<div class="check-box">
+						<i><input name="check-box" type="checkbox"/></i>
+					</div>
+					<span>项目基础信息管理</span>
+				</li>
+			</ul>
+		</div>
+		<footer class="disp_footer">
+			<div class="center">
+				<button class="btn btn-fixed80 btn-default confirm">确认</button>
+				<button class="btn btn-fixed80 btn-primary cancel">取消</button>
+			</div>
+		</footer>
+	</div>
+	<!--tag end-->
+<script type="text/javascript" src="../js/common/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="../js/common/tag.js"></script>
+<script type="text/javascript" src="../js/common/selectors.js"></script>
+<script type="text/javascript" src="../js/common/calendar.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	parent.adaptiveHeight("project_home");
+});
+$(".deleteUser").on("click",function(){
+	$(this).closest("li").remove();
+});
+$(".roleSet").on("click",function(){
+	$(".powerSetPanel").show();
+});
+$(".powerSetPanel .win_cancel,.powerSetPanel .cancel,.powerSetPanel .confirm").on("click",function(){
+	$(".powerSetPanel").hide();
+});
+
+</script>
+</body>
+</html>

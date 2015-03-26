@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>弹出框</title>
+<link href="css/common/cmf-base.css" rel="stylesheet" type="text/css" />
+<link href="css/common/disp_alert.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+<!--
+	data-object           对象类
+	data-kind							此对象类的种类
+  data-contype					内容的载入方式
+  data-url							载入路径
+  data-name							名称
+  data-boxHeight				盒模型高度
+  data-boxWidth					盒模型宽度
+  data-isCenter					盒模型是否页面居中
+  data-magnify					盒模型是否可以最大化
+  data-click						定义对象点击事件
+-->
+	<button class="btn btn-primary" data-object="popUpBox" data-kind="popUp" data-contype="url" data-url="url:http://www.baidu.com" data-name="iframePage" data-boxHeight="400" data-boxWidth="600" data-isCenter="true" data-magnify="1" data-click="popUp(this)" >iframe</button>
+	<button class="btn" data-object="popUpBox" data-kind="popUp" data-contype="load" data-boxHeight="400" data-boxWidth="600" data-url="load:Calendar.html"  data-name="loadPage" data-isCenter="true" data-magnify="1" data-click="popUp(this)" >load</button>
+	<button class="btn" data-object="popUpBox" data-kind="hint" data-name="提示名称" data-content="提示内容" data-click="popUp(this)" >提示</button>
+	<button class="btn" data-object="popUpBox" data-kind="validity" data-name="确认名称" data-content="确认内容" data-click="popUp(this)" >确认</button>
+  
+<script type="text/javascript" src="js/common/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="js/common/disp_alert.js"></script>
+<script>
+$("[data-click]").click(function(){
+	var method = $(this).attr("data-click");
+	eval(method);
+});
+</script>
+</body>
+</html>

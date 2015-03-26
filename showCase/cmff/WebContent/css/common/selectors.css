@@ -1,0 +1,46 @@
+@charset "utf-8";
+body div{ float:left;}
+/*****************列表******************/
+.sel_wrap {
+	width: 200px;height: 26px;border: 1px solid #BBBBBB;cursor: pointer;position: relative; border-radius:3px;
+	font-family: "宋体";
+}
+.sel_wrap span {
+	line-height: 28px;*line-height: 25px;padding-left: 10px;
+	font-size: 14px;color:#3f3f3f ;
+	position: relative ;	
+}
+.sel_wrap select {
+	width: 100%;height: 27px;*height:28px;	font-size: 12px; color: #3f3f3f;
+	position: absolute;
+	padding: 0;cursor: pointer;top: 0;left: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0);  opacity: 0; 
+	margin:0px;*margin-top:5px;margin-right: 0px;margin-left:0px;margin-bottom: 0px;
+}
+.sel_wrap select option,.sel_wrap30 select option{ padding:4px 6px;}
+.sel_wrap30 {
+	width: 98%;height: 30px;border: 0px solid #BBBBBB;cursor: pointer;position: relative;	
+	 border-radius:3px;font-family: "宋体";
+}
+.sel_wrap30 span {
+	line-height: 30px;*line-height: 30px;padding-left: 10px;
+	font-size: 14px;color:#3f3f3f ;
+	position: relative;	
+}
+.sel_wrap30 select {
+	width: 100%;height: 31px;*height:30px;	font-size: 12px; color: #3f3f3f;
+	position: absolute;
+	padding: 0;cursor: pointer;top: 0;left: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter:alpha(opacity=0);  opacity: 0; 
+	margin:0px;*margin-top:7px;margin-right: 0px;margin-left:0px;margin-bottom: 0px;
+}
+.select-icon{ background:url(../../resources/left-1.fw.png) no-repeat; transform:rotate(-90deg); width:18px; height:18px; background-size:18px 18px; float:right; margin-top:6px; margin-right:10px;}
+
+
+/*input*/
+.stanInput{
+	border:1px solid #ccc;
+	height:30px;
+	width:260px;
+	border-radius:4px;
+}
